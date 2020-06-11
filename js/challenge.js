@@ -2,7 +2,6 @@
 // Requires page to load so start off with DOMContentLoaded eventListener.
 document.addEventListener('DOMContentLoaded', (e) => {
     
-    let count = 0
     let likeTable = {}
     let counter = document.querySelector("#counter")
     const likes = document.querySelector(".likes")
@@ -74,7 +73,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             heart.disabled = true
             submit.disabled = true
             pause.innerText = "resume"
-            // pause.id = "resume"
+            pause.id = "resume"
         }
         // retrieve resume?
         // (add another addEventListener to resume?)
@@ -87,9 +86,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 heart.disabled = false
                 submit.disabled = false
                 pause.innerText = "pause"
-                // resume.id = "pause"
+                resume.id = "pause"
             }
             
+        });
         // addEventListener for submit
             submit.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 })
                 
         
-});
 
 
 
